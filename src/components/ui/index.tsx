@@ -1,3 +1,5 @@
 import Carusel from "./carusel"
+import Card from "./card";
 
-export {Carusel}
+
+export {Carusel , Card } 

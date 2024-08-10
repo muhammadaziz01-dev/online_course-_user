@@ -6,7 +6,7 @@ import {
   } from "react-router-dom";
   
   import App from "../App";
-  import { Home  } from "@pages";
+  import { Home , Auth , Courses } from "@pages";
   import HomeLayout from "../layout";
   
   const index = () => {
@@ -15,12 +15,8 @@ import {
         <Route path="/" element={<App />}>
             <Route path="/" element={<HomeLayout />}>
                 <Route index element={<Home />} />
-                {/* <Route path="xizmatlar" element={<Xizmatlar />} />
-                <Route path="malumotlar" element={<Malumotlar />} />
-                <Route path="aloqa" element={<Aloqa />} />
-                <Route path="maxsulotlar" element={<Maxsulotlar />} />
-                <Route path="loyihalar" element={<Loyihalar />} />
-                <Route path="yangiliklar" element={<Yangiliklar />} /> */}
+                <Route path=":coursId" element={<Courses />} />
+                <Route path="auth" element={<Auth />} />
             </Route>  
           </Route>
       )

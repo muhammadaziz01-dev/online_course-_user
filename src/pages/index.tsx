@@ -1,3 +1,5 @@
-import Home from "./home"
+import Home from "./home";
+import Auth from "./auth";
+import Courses from "./courses"
 
-export { Home }
+export { Home , Courses , Auth } 

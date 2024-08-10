@@ -6,7 +6,7 @@ const index = () => {
     return (
         <> 
             <Header />
-            <main className=" min-h-[80vh]">
+            <main className=" min-h-[76vh] mt-[90px]">
                 <Outlet />
             </main>
             <Footer/>

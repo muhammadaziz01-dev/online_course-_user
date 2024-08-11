@@ -15,7 +15,7 @@ import {
         <Route path="/" element={<App />}>
             <Route path="/" element={<HomeLayout />}>
                 <Route index element={<Home />} />
-                <Route path=":coursId" element={<Courses />} />
+                <Route path=":courseId" element={<Courses />} />
                 <Route path="auth" element={<Auth />} />
             </Route>  
           </Route>

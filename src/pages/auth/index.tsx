@@ -13,10 +13,10 @@ const index = () => {
 
   //Aftarization -> signin and signup <-=-=-=--=-=-=-==-=-=-=-
   const signUp = async (values: any) => {
-    console.log(values);
+    const userInfo = {...values, role: 'user'};
 
     try {
-      const res = await auth.signup(values);
+      const res = await auth.signup(userInfo);
       console.log(res);
       if (res.status === 201) {
         messageApi.success("Signup successful");
@@ -38,7 +38,7 @@ const index = () => {
         setCookies("access_token", res?.data?.token);
         messageApi.success("Signin successful");
         setTimeout(() => {
-          navigate("/home");
+          navigate("/");
         }, 1000);
       }
     } catch (error: any) {
@@ -124,18 +124,6 @@ const index = () => {
                   </Form.Item>
 
                   {/* role */}
-                  <Form.Item
-                    name="role"
-                    label="Role"
-                    hasFeedback
-                    style={{ width: "100%" }}
-                    rules={[{ required: true }]}
-                  >
-                    <Input
-                      style={{ width: "100%", fontSize: 16 }}
-                      size="large"
-                    />
-                  </Form.Item>
                 </div>
                 <Form.Item>
                   <Button
